@@ -1,20 +1,20 @@
 # Math_153_Initial_Code
 
-import math
-
-def is_prime(num):
-    if num < 2:
-        return False
-    for i in range(2, int(math.sqrt(num))+1):
-        if num % i == 0:
+    import math
+    
+    def is_prime(num):
+        if num < 2:
             return False
-    return True
-
-def guess_number():
-    print("Please specify the range of numbers.")
-    lower_limit = int(input("Enter the lower limit of the range: "))
-    upper_limit = int(input("Enter the upper limit of the range (maximum allowed: 10,000): "))
-
+        for i in range(2, int(math.sqrt(num))+1):
+            if num % i == 0:
+                return False
+        return True
+    
+    def guess_number():
+        print("Please specify the range of numbers.")
+        lower_limit = int(input("Enter the lower limit of the range: "))
+        upper_limit = int(input("Enter the upper limit of the range (maximum allowed: 10,000): "))
+    
     if upper_limit > 10000:
         print("The upper limit cannot exceed 10,000. Please restart the program.")
         return
@@ -119,4 +119,4 @@ def guess_number():
                         print(f"The number is: {possible_numbers[0]}")
                         return
 
-guess_number()
+    guess_number()
